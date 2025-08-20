@@ -13,49 +13,43 @@ public class Estudiante{
         this.nombre = nombre;
         this.Facultad = Facultad;
     }
+    public String getnombre(){
+        return nombre;
+    }
+
+    public String getFacultad(){
+        return Facultad;
+    }
 
     public String  toString()
     {
-        return "Estudiante{ Id: "+ Id + "  Nombre : " + nombre + " Facultad: " + Facultad +"}";
+        return "Estudiante[ Id: "+ Id + "  Nombre : " + nombre + " Facultad: " + Facultad +"]";
     }
 
-    public static int CantidadEstudiantes(Estudiante[] estudiantes, String facultadBuscada) {
+    //Metodo para saber cuantos estudiantes tiene una facultad
+    public int CantidadEstudiantes(Estudiante[] e, String NombreFacultad) {
         int contador = 0;
-        for (Estudiante est : estudiantes) {
-            if (est != null && est.Facultad.equalsIgnoreCase(facultadBuscada)) {
-                contador++;
-            }
-           
-            } 
-            return contador;
-            
-}
-
-    public class EjecutarEstudiante
-     {
-
-        public static void main(String[] args) {
-            //Creacion de los objetos Estudiante.
-            Estudiante objEst1 = new Estudiante(756, "Manuel Mora Orozco", "Ingenieria de sistemas");
-            Estudiante objEst2 = new Estudiante(757, "Juan Esteban Naranjo", "Ingenieria de sistemas");
-            
-
-            Estudiante[] e = new Estudiante[3];
-            e[0] = objEst1;
-            e[1] = objEst2;
-            e[2] = new Estudiante(123, "Danna Jineth", "Artes Integradas");
-
-            int cantidad = Estudiante.CantidadEstudiantes(e, "Ingenieria de sistemas");
-
-
-            for (int i = 0; i < e.length; i++) 
+        for(int i = 0; i < e.length; i++)
+        {
+            if(e[i].getFacultad().equals(NombreFacultad))
             {
-                System.out.println(e[i]);
+                contador ++;
             }
-
-            System.out.println("Cantidad de estudiantes de Ingenieria de sistemas = " + cantidad);
         }
+        return contador;
+            } 
 
+    //Metodo para mostrar  todos los nombres de los estudiantes
+    public void mostrarNombres(Estudiante[] e) {
+        for(int i = 0; i< e.length; i++)
+        {
+            System.out.println(e[i].getnombre());
+        }
+        
     }
 
+            
 }
+
+    
+
