@@ -1,58 +1,114 @@
 public class Biblioteca {
-
-    private String Titulo;
+    
+    private int id; 
     private String Autor;
-    private int id;
     private double Precio;
+    private String Titulo;
+   
 
-    public Biblioteca(String titulo, String autor, int id, double precio) {
-        Titulo = titulo;
-        Autor = autor;
+    
+
+    public Biblioteca(int id, String autor, double precio, String titulo) {
         this.id = id;
+        Autor = autor;
         Precio = precio;
-    }
-
-    public String getTitulo() {
-        return Titulo;
-    }
-
-    public void setTitulo(String titulo) {
         Titulo = titulo;
     }
 
-    public String getAutor() {
-        return Autor;
-    }
+    
 
-    public void setAutor(String autor) {
-        Autor = autor;
-    }
+
+
 
     public int getId() {
         return id;
     }
 
+     
+
+
+
+
+    @Override
+    public String toString() {
+        return "Biblioteca [id=" + id + ", Autor=" + Autor + ", Precio=" + Precio + ", Titulo=" + Titulo + "]";
+    }
+
+
+
+
+
+
     public void setId(int id) {
         this.id = id;
     }
+
+
+
+
+
+
+    public String getAutor() {
+        return Autor;
+    }
+
+
+
+
+
+
+    public void setAutor(String autor) {
+        Autor = autor;
+    }
+
+
+
+
+
 
     public double getPrecio() {
         return Precio;
     }
 
+
+
+
+
+
     public void setPrecio(double precio) {
         Precio = precio;
     }
 
-    @Override
-    public String toString() {
-        return "Biblioteca [Titulo=" + Titulo + ", Autor=" + Autor + ", id=" + id + ", Precio=" + Precio + "]";
+
+
+
+
+
+    public String getTitulo() {
+        return Titulo;
     }
 
-    public double CalcularPrecios(Biblioteca[] Bibliotecas)
-    {
-       Precio = 0.0;
+
+
+
+
+
+    public void setTitulo(String titulo) {
+        Titulo = titulo;
     }
+
+
+
+
+
+
+    public static double CalcularPrecios(Biblioteca[] bibliotecas) {
+    double total = 0.0;
+    for (int i = 0; i < bibliotecas.length; i++) {
+        total += bibliotecas[i].getPrecio();
+    }
+    return total;
+}
 
 
 
