@@ -1,10 +1,12 @@
 public class EjecutarLibro {
 
     public static void main(String[] args) {
+
+        Biblioteca[] Bibliotecas = new Biblioteca[5];
         
-        Biblioteca Lib1 = new Biblioteca("Cien años de soledad", "Gabriel García Márquez", 01, 59900);
-        Biblioteca Lib2 = new Biblioteca("1984", "George Orwell", 02,50000);
-        Biblioteca Lib3 = new Biblioteca("null", null, 0, 0)
+       Bibliotecas[0] = new Biblioteca("Cien años de soledad", "Gabriel García Márquez", 01,59900);
+       Bibliotecas[1] = new Biblioteca("1984", "George Orwell", 02, 50000);
+       Bibliotecas[2] = new Biblioteca("El nombre del viento", "Patrick Rothfuss", 03, 67000);
 
     }
 

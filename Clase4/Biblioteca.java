@@ -3,9 +3,9 @@ public class Biblioteca {
     private String Titulo;
     private String Autor;
     private int id;
-    private int Precio;
+    private double Precio;
 
-    public Biblioteca(String titulo, String autor, int id, int precio) {
+    public Biblioteca(String titulo, String autor, int id, double precio) {
         Titulo = titulo;
         Autor = autor;
         this.id = id;
@@ -36,11 +36,11 @@ public class Biblioteca {
         this.id = id;
     }
 
-    public int getPrecio() {
+    public double getPrecio() {
         return Precio;
     }
 
-    public void setPrecio(int precio) {
+    public void setPrecio(double precio) {
         Precio = precio;
     }
 
@@ -48,6 +48,13 @@ public class Biblioteca {
     public String toString() {
         return "Biblioteca [Titulo=" + Titulo + ", Autor=" + Autor + ", id=" + id + ", Precio=" + Precio + "]";
     }
+
+    public double CalcularPrecios(Biblioteca[] Bibliotecas)
+    {
+       Precio = 0.0;
+    }
+
+
 
     
 
