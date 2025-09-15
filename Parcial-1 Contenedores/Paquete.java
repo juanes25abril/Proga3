@@ -1,32 +1,49 @@
-Public class Paquete;{
+public class Paquete{
 
     private int IdPaquete;
     private String Destinatario;
-    Private String Fechaingreso;
+    private String Fechaingreso;
 
-     public Paquete(int idPaquete, String destinatario, String fechaIngreso) {
-        this.idPaquete = idPaquete;
-        this.destinatario = destinatario;
-        this.fechaIngreso = fechaIngreso;
+    public Paquete(int idPaquete, String destinatario, String fechaingreso) {
+        IdPaquete = idPaquete;
+        Destinatario = destinatario;
+        Fechaingreso = fechaingreso;
     }
 
     public int getIdPaquete() {
-        return idPaquete;
+        return IdPaquete;
+    }
+
+    public void setIdPaquete(int idPaquete) {
+        IdPaquete = idPaquete;
     }
 
     public String getDestinatario() {
-        return destinatario;
+        return Destinatario;
     }
 
-    public String getFechaIngreso() {
-        return fechaIngreso;
+    public void setDestinatario(String destinatario) {
+        Destinatario = destinatario;
+    }
+
+    public String getFechaingreso() {
+        return Fechaingreso;
+    }
+
+    public void setFechaingreso(String fechaingreso) {
+        Fechaingreso = fechaingreso;
     }
 
     @Override
     public String toString() {
-        return "Paquete ID: " + idPaquete + 
-               ", Destinatario: " + destinatario + 
-               ", Fecha Ingreso: " + fechaIngreso;
+        return "Paquete [IdPaquete=" + IdPaquete 
+        + ", Destinatario=" + Destinatario + 
+        ", Fechaingreso=" + Fechaingreso
+                + "]";
     }
+
+    
+
+    
 
 }
