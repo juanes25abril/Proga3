@@ -1,5 +1,5 @@
 public class GestionarCasillero {
-    private Casillero [][] casilleros;
+    public Casillero [][] casilleros;
 
     public GestionarCasillero (int filas, int columnas) {
         casilleros = new Casillero [filas][columnas];
@@ -47,5 +47,7 @@ public class GestionarCasillero {
             }
         }
     }
+   
+
     }
 

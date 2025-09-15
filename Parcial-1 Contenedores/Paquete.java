@@ -36,9 +36,9 @@ public class Paquete{
 
     @Override
     public String toString() {
-        return "Paquete [IdPaquete=" + IdPaquete 
-        + ", Destinatario=" + Destinatario + 
-        ", Fechaingreso=" + Fechaingreso
+        return "Paquete [ID del Paquete = " + IdPaquete 
+        + ", Destinatario = " + Destinatario + 
+        ", Fecha de ingreso = " +  Fechaingreso
                 + "]";
     }
 
