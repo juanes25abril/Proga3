@@ -7,10 +7,30 @@ public class PruebaArray {
         nombres.add("Shirose");
         nombres.add("Aila");
         nombres.add("Yosef");
+
         System.out.println(nombres);
-        System.out.println(nombres.size());
+        System.out.println("Tamaño del ArrayList: " + nombres.size());
 
+        int indice = nombres.indexOf("Aila");
+        System.out.println("El índice de 'Aila' es: " + indice);
+
+        int noExiste = nombres.indexOf("Cass");
+        System.out.println("El índice de 'Cass' es: " + noExiste);
+
+        // 💡 Ejemplo de startsWith():
+        System.out.println("\nNombres que empiezan con 'A':");
+        for (String nombre : nombres) {
+            if (nombre.startsWith("A")) {
+                System.out.println(nombre);
+            }
+        }
+
+        String prefijo = "S";
+        System.out.println("\nNombres que empiezan con '" + prefijo + "':");
+        for (String nombre : nombres) {
+            if (nombre.startsWith(prefijo)) {
+                System.out.println(nombre);
+            }
+        }
     }
-
-    
 }
