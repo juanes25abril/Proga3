@@ -37,9 +37,7 @@ class DijkstraMatriz {
     }
 }
 
-// ---------------------------------
-// MÉTODOS DE ORDENAMIENTO
-// ---------------------------------
+
 class Ordenamientos {
 
     public static int[] burbuja(int[] arr) {
@@ -135,9 +133,7 @@ class Ordenamientos {
     }
 }
 
-// ---------------------------------
-// EJECUTADOR PRINCIPAL
-// ---------------------------------
+
 public class Main {
     public static void main(String[] args) {
         try {
